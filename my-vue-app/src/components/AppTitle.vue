@@ -2,18 +2,29 @@
 export default {
   data() {
     return {
-      title:"La mia prima app con Vitae!"
+      title:"Breaking Bead Api"
     }
   }
 }
 </script>
 
 <template>
-  <h1>{{title}}</h1>
+  <div class="title">
+    <img src="../assets/logo.png" alt=""> 
+    <h1>{{title}}</h1>
+  </div>
+ 
 </template>
 
 <style scoped>
+.title{
+  display: flex;
+  padding: 10px;
+}
+img{
+  height: 35px;
+}
 h1{
-    color: coral;
+  color: var(--secondary-color);
 }
 </style>
