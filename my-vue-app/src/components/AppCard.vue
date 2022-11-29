@@ -9,10 +9,10 @@ export default {
 
 <template>
     <div class="card">
-        <img src="https://c8.alamy.com/comp/PM870M/walter-white-bryan-cranston-breaking-bad-gallery-photo-credit-frank-ockenfelsamc-PM870M.jpg" alt="">
-        <h4>Walter White</h4>
-        <span>Breaking Bead</span>
-        <span>Presumed dead</span>
+        <img :src="info.img" alt="">
+        <h4>{{info.name}}</h4>
+        <span>{{info.category}}</span>
+        <span>{{info.status}}</span>
     </div>
  
 </template>

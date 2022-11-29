@@ -1,10 +1,11 @@
 <script>
-import Axios from "axios"
+import axios from "axios"
 import AppCard from './AppCard.vue'
 
 export default {
     components: {
         AppCard,
+
     },
     data(){
         return{
@@ -13,7 +14,8 @@ export default {
     },
     created(){
          axios.get("https://www.breakingbadapi.com/api/characters").then((resp) => {
-            console.log(resp);
+            this.characters = resp.data;
+            console.log(resp.data)
          })
     }
 
@@ -25,7 +27,10 @@ export default {
     <div class="bar">
         <h3>Found 62 charcters</h3>
     </div>
-    <AppCard/>
+    <AppCard
+    v-for="character in characters"
+    :info="character"
+    />
   </div>
  
 </template>
